@@ -12,9 +12,9 @@ See [CS160 PROJ1 DEMO: xrcize] (https://www.youtube.com/watch?v=am7uVKxEDpY)
 
 ## Screenshots
 
-<img src="screenshots/main1.png" height="400" alt="Screenshot"/>
-<img src="screenshots/main2.png" height="400" alt="Screenshot"/>
-<img src="screenshots/main3.png" height="400" alt="Screenshot"/>
+<img src="screenshots/main1.PNG" height="400" alt="Screenshot"/>
+<img src="screenshots/main2.PNG" height="400" alt="Screenshot"/>
+<img src="screenshots/main3.PNG" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
 
