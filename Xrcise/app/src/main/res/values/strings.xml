@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">xrcize</string>
+    <string name="edit_message">enter number</string>
+    <string name="cals_burned">calories burned</string>
+
+    <string name="center_text_1">CLICK HERE TO CONVERT</string>
+    <string name="center_text_2">calculated amount of activity</string>
+
+    <string name="top_info_string">top</string>
+    <string name="bottom_info_string">bottom</string>
+    <string name="bottom_exercise">b_exercise</string>
+    <string name="top_exercise">t_exercise</string>
+    <string name="top_exercise_type">t_type</string>
+    <string name="bottom_exercise_type">b_type</string>
+    <string name="edit_top">enter number</string>
+    <string name="edit_bottom">enter number</string>
+
+
+</resources>

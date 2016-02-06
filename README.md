@@ -1,18 +1,20 @@
 # PROG 01: Crunch Time
 
-Briefly describe your app here.
+xrcise is a simple calorie converter for active people who want to know the equivalence of one activity vs another in calorie burn.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Caryn Tran ([caryn.tran@berkeley.edu](mailto:caryn.tran@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [CS160 PROJ1 DEMO: xrcize] (https://www.youtube.com/watch?v=am7uVKxEDpY)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/main1.png" height="400" alt="Screenshot"/>
+<img src="screenshots/main2.png" height="400" alt="Screenshot"/>
+<img src="screenshots/main3.png" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
 

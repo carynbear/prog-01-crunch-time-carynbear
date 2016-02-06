@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.caryn.xrcise.MainActivity"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/material_grey_800"
+        android:baselineAligned="false"
+        android:id="@+id/calorie_bar"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_weight=".2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/enter_calories"
+            android:hint="@string/edit_message"
+            android:layout_marginStart="20dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/abc_text_size_small_material"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cals_burned"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="0.04"
+            android:layout_gravity="center"
+            android:id="@+id/cals_burnt"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="0dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="calculate"
+            android:id="@+id/calculate"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="calculate" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/outline_frame"
+        android:layout_alignParentBottom="false"
+        android:layout_above="@+id/calorie_bar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/material_grey_300"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/top_line" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/material_grey_300"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/bottom_line" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/material_grey_300"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/left_line" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/material_grey_300"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/right_line" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="2"
+        android:id="@+id/main_frame"
+        android:layout_above="@+id/calorie_bar">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:baselineAligned="false"
+            android:gravity="top"
+            android:divider="#e0e0e0"
+            android:id="@+id/top_frame">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/top_image"
+                android:layout_gravity="center"
+                android:src="@mipmap/cardio"
+                android:layout_weight="2" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/material_grey_300"
+                android:id="@+id/top_divider"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_weight="1"
+                android:id="@+id/top_info">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/top_white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/top_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/top_button">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:layout_gravity="bottom"
+                            android:id="@+id/top_exercise_group"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/top_exercise"
+                                android:id="@+id/top_exercise"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="#ffa7a7"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentStart="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/top_exercise_type"
+                                android:text="@string/top_exercise_type"
+                                android:layout_below="@+id/top_exercise"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="0dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="from"
+                            android:id="@+id/textView"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_above="@+id/top_exercise_group"
+                            android:layout_toStartOf="@+id/top_exercise_group" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text=">"
+                        android:id="@+id/top_button"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@color/pink" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/top_num"
+                    android:background="@color/material_grey_300"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="4">
+
+                    <EditText
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/top_reps_minutes"
+                        android:hint="@string/edit_message"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/top_info_string"
+                        android:layout_marginEnd="0dp"
+                        android:layout_weight="0"
+                        android:layout_gravity="center"
+                        android:id="@+id/top_info_string"
+                        android:paddingRight="0dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#424242"
+            android:id="@+id/mid_line"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:clickable="false"
+            android:outlineProvider="none">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="CLICK HERE TO CONVERT"
+                android:id="@+id/convert"
+                android:onClick="convert"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:id="@+id/bottom_frame"
+            android:divider="#06c7a3"
+            android:dividerPadding="5dp">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/bottom_image"
+                android:layout_margin="0dp"
+                android:src="@mipmap/cardio"
+                android:layout_weight="2" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/material_grey_300"
+                android:id="@+id/bottom_divider" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:id="@+id/bottom_info"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:id="@+id/bottom_white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/bottom_txt"
+                        android:layout_alignStart="@id/bottom_txt"
+                        android:layout_toStartOf="@+id/bottom_button">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:layout_gravity="top|left"
+                            android:id="@+id/bottom_exercise_group"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/bottom_exercise"
+                                android:id="@+id/bottom_exercise"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#ffa7a7"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="@string/bottom_exercise_type"
+                                android:id="@+id/bottom_type_exercise"
+                                android:layout_below="@+id/bottom_exercise"
+                                android:layout_centerHorizontal="true" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="to"
+                            android:id="@+id/textView2"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_above="@+id/bottom_exercise_group"
+                            android:layout_toStartOf="@+id/bottom_exercise_group" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text=">"
+                        android:id="@+id/bottom_button"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:background="@color/pink"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bottom_num"
+                    android:layout_weight="4"
+                    android:background="@color/material_grey_300"
+                    android:gravity="center_vertical|center_horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_weight="0"
+                        android:layout_gravity="center"
+                        android:id="@+id/bottom_result"
+                        android:paddingRight="0dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
